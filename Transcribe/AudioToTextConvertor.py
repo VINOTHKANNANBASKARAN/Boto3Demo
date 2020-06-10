@@ -3,7 +3,7 @@ import time
 import boto3
 import json
 transcribe = boto3.client('transcribe')
-job_name = "transcribefromboto3trial3"
+job_name = "transcribefromboto3trial5"
 job_uri = "https://transcibedemo.s3.ap-south-1.amazonaws.com/ttsMP3.com_VoiceText_2020-6-9_20_59_12.mp3"
 transcribe.start_transcription_job(
     TranscriptionJobName=job_name,
@@ -19,5 +19,5 @@ while True:
     print("Not ready yet...")
     time.sleep(5)
 
-response = json.dumps(status)
-print(response)
+
+print(status)
